@@ -420,6 +420,38 @@ em {
     color: var(--white);
     background-color: var(--green);
 }
+
+.header-nav button {
+    cursor: pointer;
+    background-color: transparent;
+    display: none;
+}
+
+.header-nav .close {
+    font-size: 26px;
+    border: none;
+}
+
+.header-nav .solid-bar {
+    font-size: 22px;
+    opacity: .6;
+    padding: 0 6px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    border: 2px solid var(--black);
+    border-radius: var(--radius-sm);
+    -webkit-border-radius: var(--radius-sm);
+    -moz-border-radius: var(--radius-sm);
+    -ms-border-radius: var(--radius-sm);
+    -o-border-radius: var(--radius-sm);
+}
+
+.header-nav .solid-bar:hover {
+    opacity: 1;
+}
 /* Webpage Header CSS End */
 
 .webpage-heroarea {
@@ -672,6 +704,7 @@ footer .container {
 .footer-content address {
     margin: 0;
     font-style: normal;
+    font-size: var(--base);
 }
 
 .footer-content .location {
@@ -689,6 +722,7 @@ footer .container {
 }
 
 .footer-content .contact a {
+    font-size: var(--base);
     color: var(--footer-text);
     transition: var(--transition);
     -webkit-transition: var(--transition);
