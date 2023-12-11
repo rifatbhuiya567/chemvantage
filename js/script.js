@@ -50,6 +50,37 @@ const fns = () => {
       document.querySelector(".webpage-logo").style.width = "200px";
     }
   };
+
+  const responsiveNav = () => {
+    let bar = document.querySelector('.solid-bar'),
+      close = document.querySelector('.close'),
+      navList = document.querySelector('.nav-list'),
+      header = document.querySelector('.header-nav'),
+      navItem = document.querySelectorAll('.nav-item');
+
+    bar.addEventListener("click", () => {
+      if (navList.style.display === 'block') {
+        navList.style.display = 'none';
+        header.classList.remove("collapsed");
+      }else {
+        navList.style.display = 'block';
+        header.classList.add("collapsed");
+      }
+    });
+
+    close.addEventListener('click', () => {
+      navList.style.display = 'none';
+      header.classList.remove("collapsed");
+    });
+
+    navItem.forEach(item => {
+      item.addEventListener('click', () => {
+        navList.style.display = 'none';
+        header.classList.remove("collapsed");
+      });
+    });
+  }
+  responsiveNav();
 };
 fns();
 
